@@ -4,7 +4,7 @@ A small UI library with **buttons, cards and alerts**, made with Tailwind CSS ut
 Repeated class lists are extracted into reusable classes with `@apply` in `src/input.css`.
 
 ## Group members
-- Ineza (individual submission)
+- Ineza Musekura Esperance (individual submission)
 
 ## Components
 | Type | Classes |
