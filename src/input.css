@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* ============================================================
+   COMPONENT LIBRARY (Tailwind utilities + @apply only)
+   ============================================================ */
+
+@layer components {
+  /* ---------- BUTTONS ---------- */
+
+  /* Shared base: every button gets these classes */
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold
+           transition duration-150
+           focus:outline-none focus-visible:ring-4
+           disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-indigo-600 text-white
+           hover:bg-indigo-700
+           focus-visible:ring-indigo-300
+           disabled:hover:bg-indigo-600;
+  }
+
+  .btn-secondary {
+    @apply bg-slate-200 text-slate-800
+           hover:bg-slate-300
+           focus-visible:ring-slate-400
+           disabled:hover:bg-slate-200;
+  }
+
+  .btn-outline {
+    @apply border-2 border-indigo-600 bg-transparent text-indigo-600
+           hover:bg-indigo-600 hover:text-white
+           focus-visible:ring-indigo-300
+           disabled:hover:bg-transparent disabled:hover:text-indigo-600;
+  }
+
+  /* ---------- CARDS ---------- */
+
+  .card {
+    @apply overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md
+           transition hover:shadow-xl;
+  }
+
+  .card-body {
+    @apply p-6;
+  }
+
+  .card-title {
+    @apply text-lg font-bold text-slate-900;
+  }
+
+  .card-text {
+    @apply mt-2 text-sm leading-relaxed text-slate-600;
+  }
+
+  .card-image {
+    @apply h-48 w-full object-cover;
+  }
+
+  /* Profile card extras */
+  .avatar {
+    @apply mx-auto flex h-24 w-24 items-center justify-center rounded-full
+           bg-indigo-100 text-3xl font-bold text-indigo-600 ring-4 ring-indigo-200;
+  }
+
+  .price {
+    @apply text-xl font-extrabold text-indigo-600;
+  }
+
+  /* ---------- ALERTS ---------- */
+
+  .alert-success,
+  .alert-warning,
+  .alert-error,
+  .alert-info {
+    @apply flex items-start gap-3 rounded-lg border-l-4 p-4 text-sm;
+  }
+
+  .alert-success {
+    @apply border-green-500 bg-green-50 text-green-800;
+  }
+
+  .alert-warning {
+    @apply border-yellow-500 bg-yellow-50 text-yellow-800;
+  }
+
+  .alert-error {
+    @apply border-red-500 bg-red-50 text-red-800;
+  }
+
+  .alert-info {
+    @apply border-blue-500 bg-blue-50 text-blue-800;
+  }
+
+  .alert-title {
+    @apply font-bold;
+  }
+}

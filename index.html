@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Component Library</title>
+  <link rel="stylesheet" href="./dist/output.css" />
+</head>
+<body class="bg-slate-100 text-slate-800">
+  <main class="mx-auto max-w-5xl space-y-12 px-4 py-10">
+
+    <header>
+      <h1 class="text-3xl font-extrabold text-slate-900">Tailwind Component Library</h1>
+      <p class="mt-2 text-slate-600">Buttons, cards and alerts built with Tailwind utilities and <code class="rounded bg-slate-200 px-1">@apply</code>.</p>
+    </header>
+
+    <!-- BUTTONS -->
+    <section>
+      <h2 class="mb-4 text-xl font-bold">Buttons</h2>
+      <div class="space-y-4 rounded-2xl bg-white p-6 shadow">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="w-24 text-sm font-semibold text-slate-500">Normal</span>
+          <button class="btn-primary">Primary</button>
+          <button class="btn-secondary">Secondary</button>
+          <button class="btn-outline">Outline</button>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="w-24 text-sm font-semibold text-slate-500">Disabled</span>
+          <button class="btn-primary" disabled>Primary</button>
+          <button class="btn-secondary" disabled>Secondary</button>
+          <button class="btn-outline" disabled>Outline</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARDS -->
+    <section>
+      <h2 class="mb-4 text-xl font-bold">Cards</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+
+        <!-- Profile card -->
+        <article class="card">
+          <div class="card-body text-center">
+            <div class="avatar">IN</div>
+            <h3 class="card-title mt-4">Ineza</h3>
+            <p class="card-text">Software engineering student at AUCA.</p>
+            <div class="mt-5 flex justify-center gap-3">
+              <button class="btn-primary">Follow</button>
+              <button class="btn-outline">Message</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product card -->
+        <article class="card">
+          <img class="card-image" src="Classic watch.jpeg" alt="Wrist watch" />
+          <div class="card-body">
+            <div class="flex items-center justify-between">
+              <h3 class="card-title">Classic Watch</h3>
+              <span class="price">$89</span>
+            </div>
+            <p class="card-text">A simple and clean watch for everyday use. Light, strong and water resistant.</p>
+            <button class="btn-primary mt-5 w-full">Add to cart</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ALERTS -->
+    <section>
+      <h2 class="mb-4 text-xl font-bold">Alerts</h2>
+      <div class="space-y-3">
+        <div class="alert-success" role="alert">
+          <div><p class="alert-title">Success</p><p>Your account was created.</p></div>
+        </div>
+        <div class="alert-warning" role="alert">
+          <div><p class="alert-title">Warning</p><p>Your password will expire in 3 days.</p></div>
+        </div>
+        <div class="alert-error" role="alert">
+          <div><p class="alert-title">Error</p><p>We could not save your changes. Try again.</p></div>
+        </div>
+        <div class="alert-info" role="alert">
+          <div><p class="alert-title">Info</p><p>A new version will be released tomorrow.</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
